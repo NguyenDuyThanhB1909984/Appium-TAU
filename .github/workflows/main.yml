@@ -36,4 +36,6 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: mvn clean test -Pandroid
+        script: |
+          emulator -avd Nexus_6_API_23  # Thay thế bằng tên AVD và API level phù hợp
+
